@@ -2,11 +2,14 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+      //the this keyword is a shortcut used to refer to an object that is being executed by the code.
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-
+      //implicit binding
+      //explicit binding
+      //new binding
+      //default binding
   // 3) What is the difference between call and apply?
 
       //Answer
@@ -24,9 +27,15 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
+    var user = {
+      username: "thughes",
+      email: "thughes@test.com",
+      getUsername: function(){
+        return this.username;
+      }
+    };
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
+user.getUsername();
 
 //Next Problem
 
@@ -34,7 +43,9 @@
 // Write the function definitions which will make the following function invocations function properly.
 
   //Function Invocations Here
-
+function Car(){
+  //moveCar: 
+}
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 
