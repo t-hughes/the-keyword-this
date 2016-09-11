@@ -43,11 +43,26 @@ user.getUsername();
 // Write the function definitions which will make the following function invocations function properly.
 
   //Function Invocations Here
-function Car(){
-  //moveCar: 
+function Car(make, model, year){
+  var carObj = {
+    make: make,
+    model: model,
+    year: year,
+    move: 0
+  };
+  return carObj;
 }
+
+function moveCar(){
+  this.move += 10;
+  return this.move;
+}
+
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
+
+prius.moveCar = moveCar;
+mustang.moveCar = moveCar;
 
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
@@ -85,7 +100,7 @@ var userName = getMyUsername(); //Fix this
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
   //Answer Here
-
+  //////iliketurtles
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
